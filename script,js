@@ -1,0 +1,41 @@
+// Mensagem de boas-vindas
+window.onload = function () {
+    alert("⚡ Bem-vindo ao Mundo Mágico de Harry Potter! ⚡");
+};
+
+// Lista de curiosidades
+const curiosidades = [
+    "⚡ Daniel Radcliffe usou cerca de 160 pares de óculos durante as filmagens.",
+    "🦉 Mais de uma coruja interpretou Hedwig ao longo dos filmes.",
+    "🚂 A Plataforma 9¾ pode ser visitada na estação King's Cross, em Londres.",
+    "📚 Harry Potter foi traduzido para dezenas de idiomas ao redor do mundo.",
+    "🏰 O castelo de Hogwarts foi inspirado em construções históricas europeias.",
+    "🪄 Voldemort significa 'fuga da morte' em francês.",
+    "⚡ A cicatriz de Harry foi desenhada milhares de vezes pelos maquiadores."
+];
+
+// Função para mostrar curiosidades aleatórias
+function mostrarCuriosidade() {
+    const indice = Math.floor(Math.random() * curiosidades.length);
+
+    document.getElementById("curiosidade").innerHTML =
+        curiosidades[indice];
+}
+
+// Efeito mágico ao clicar no título
+document.addEventListener("DOMContentLoaded", () => {
+
+    const titulo = document.querySelector("header h1");
+
+    titulo.addEventListener("click", () => {
+
+        titulo.style.textShadow =
+            "0 0 10px gold, 0 0 20px gold, 0 0 40px gold, 0 0 80px gold";
+
+        setTimeout(() => {
+            titulo.style.textShadow = "0 0 10px #d4af37";
+        }, 1000);
+
+    });
+
+});
